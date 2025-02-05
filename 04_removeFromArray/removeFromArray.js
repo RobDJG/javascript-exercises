@@ -1,27 +1,16 @@
 const removeFromArray = function (array, ...itemsToRemove) {
 
-    let result = Array.from(array)
+    const newArray = [];
 
-    for (let element of itemsToRemove) {
+    array.forEach(item => {
 
-        let removeIndex = result.indexOf(element);
-
-        if (removeIndex === -1) {
-            continue
+        if (!itemsToRemove.includes(item)) {
+            newArray.push(item)
         }
 
-        while (removeIndex != -1) {
+    });
 
-            result.splice(removeIndex, 1)
-
-            removeIndex = result.indexOf(element);
-
-        }
-
-
-    }
-
-    return result;
+    return newArray;
 
 };
 
