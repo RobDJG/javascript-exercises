@@ -1,29 +1,20 @@
 const palindromes = function (string) {
 
-    punctuationArray = ["!", ".", ",", " "]
+    const alphanumerical = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-    originalString = string.toLowerCase()
-
-
-
-    for (let i = 0; i < punctuationArray.length; i++) {
-
-        if (originalString.includes(punctuationArray[i])) {
-            originalString = originalString.replaceAll(punctuationArray[i], "");
-        }
-
-    }
-
-    reversedString = originalString.split("").reverse().join("").toLowerCase()
+    let originalString = string
+        .toLowerCase()
+        .split("")
+        .filter(char => alphanumerical.includes(char))
+        .join("")
 
 
-    if (reversedString === originalString) {
-        return true;
-    }
 
-    else {
-        return false;
-    }
+
+    let reversedString = originalString.split("").reverse().join("")
+
+
+    return reversedString === originalString;
 
 };
 
