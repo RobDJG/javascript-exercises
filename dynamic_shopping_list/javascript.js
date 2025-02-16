@@ -5,6 +5,7 @@ const input = document.querySelector("input");
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
+    
     let inputText = input.value;
 
     input.value = "";
@@ -20,11 +21,15 @@ button.addEventListener("click", () => {
 
     span.textContent = inputText;
     itemButton.textContent = "Delete"
+    itemButton.classList.add("delete-btn");
 
     list.appendChild(listItem);
 
-    itemButton.addEventListener("click", () => {
-        list.removeChild(listItem);
-    })
+})
+
+list.addEventListener("click", (event) => {
+    if(event.target.classList.contains("delete-btn")) {
+        event.target.parentElement.remove();
+    }
 })
 
