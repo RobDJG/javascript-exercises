@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Object basics: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    let bandInfo= "Los mejores del planeta"
+
+    // Add your code here
+
+    const bands = {
+        name: "Los Sufridos",
+        nationality: "Dominican",
+        genre: "Pop rock",
+        members: 7,
+        formed: 2022,
+        split: false,
+        albums: [
+            {
+                name: "Un nuevo comienzo",
+                released: 2022
+            },
+            {
+                name: "APRETAMOS",
+                released: 2023
+            }
+        ]
+    }
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+</script>
+
+</html>
