@@ -1,13 +1,9 @@
 function camelize(str) {
     return str
         .split("-")
-        .map((item, index) => {
-            if (index === 0) {
-                return item;
-            }
-
-            return item.charAt(0).toUpperCase() + item.slice(1);
-        })
-        .join("")
+        .map(
+            (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+            )
+        .join("");
 }
 
