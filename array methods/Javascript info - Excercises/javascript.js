@@ -10,9 +10,8 @@ function camelize(str) {
 
 function filterRange(arr, a, b) {
     
-    let result = arr.filter((num) => (num >= a) && (num <= b));
 
-    return result;
+    return arr.filter((num) => (num >= a) && (num <= b));
 
 }
 
