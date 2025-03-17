@@ -7,3 +7,12 @@ function camelize(str) {
         .join("");
 }
 
+
+function filterRange(arr, a, b) {
+    
+    let result = arr.filter((num) => (num >= a) && (num <= b));
+
+    return result;
+
+}
+
