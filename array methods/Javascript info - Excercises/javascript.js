@@ -29,14 +29,19 @@ function filterRangeInPlace(arr, a, b) {
     }
 }
 
-function decreasedOrderSort(arr){
+function decreasedOrderSort(arr) {
 
     arr.sort((a, b) => b - a)
 
 }
 
-function copySorted(arr){
+function copySorted(arr) {
     return arr.slice().sort()
 }
 
 
+function sortByAge(users) {
+
+    users.sort((a, b) => a.age - b.age);
+
+}
