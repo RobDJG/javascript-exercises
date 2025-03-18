@@ -34,3 +34,9 @@ function decreasedOrderSort(arr){
     arr.sort((a, b) => b - a)
 
 }
+
+function copySorted(arr){
+    return arr.slice().sort()
+}
+
+
