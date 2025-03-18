@@ -27,7 +27,10 @@ function filterRangeInPlace(arr, a, b) {
         }
 
     }
-
-    console.log("hello from outside the loop")
 }
 
+function decreasedOrderSort(arr){
+
+    arr.sort((a, b) => b - a)
+
+}
