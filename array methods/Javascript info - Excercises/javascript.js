@@ -84,8 +84,10 @@ function unique(arr) {
 
 }
 
-
-let strings = ["Hare", "Krishna", "Hare", "Krishna",
-    "Krishna", "Krishna", "Hare", "Hare", ":-O"
-  ];
+function groupById(array) {
+    return array.reduce((obj, value) => {
+      obj[value.id] = value;
+      return obj;
+    }, {})
+  }
 
