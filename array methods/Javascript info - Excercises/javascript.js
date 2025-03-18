@@ -48,19 +48,25 @@ function sortByAge(users) {
 
 function shuffle(array) {
     let currentIndex = array.length;
-  
+
     // While there remain elements to shuffle...
     while (currentIndex != 0) {
-  
-      // Pick a remaining element...
-      let randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
     }
 
     console.log(array)
-  }
-  
+}
+
+function getAverageAge(users) {
+
+    return Math.floor(users.reduce((total, user) => total += user.age, 0) / users.length)
+
+}
+
