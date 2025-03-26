@@ -18,16 +18,7 @@ const sum = function(array) {
 
 const multiply = function(array) {
 
-  let result = 1;
-
-
-  for (let num of array){
-
-    result *= Number(num);
-
-  }
-
-  return result;
+  return array.reduce((acc, currentValue) => acc * currentValue, 1);
 
 };
 
