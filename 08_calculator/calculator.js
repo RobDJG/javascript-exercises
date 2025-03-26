@@ -12,16 +12,7 @@ const subtract = function(a, b) {
 
 const sum = function(array) {
 
-  let result = 0;
-
-
-  for (let num of array){
-
-    result += Number(num);
-
-  }
-
-  return result;
+  return array.reduce((acc, currentValue) => acc + currentValue, 0);
 	
 };
 
